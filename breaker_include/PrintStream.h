@@ -26,9 +26,10 @@ public:
 
 	template <typename T>
 	void print(const char* string, T value){
-		SmartDashboard::PutString(  Utilities::concat("DB/String ",printIndex) , Utilities::concat(string,value)  );
+		SmartDashboard::PutString( /* Utilities::concat("MyVars/",string)*/Utilities::concat("DB/String ",printIndex) , Utilities::toString(value)  );
 		printIndex++;
 	}
+
 };
 
 #endif /* SRC_PRINTSTREAM_H_ */
